@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 10%, transparent 10%),
+                radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 10%);
+
+    background-size: 80px 80px;
+    animation: moveBg 20s linear infinite;
+}
+
+@keyframes moveBg {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(200px, 200px);
+    }
+}
+        /* body{
+            background-image: url("https://i.pinimg.com/1200x/08/a5/c1/08a5c1057fc2e8e28c2f701f96c0138c.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-attachment: fixed;
+            background-position: bottom right;
+        } */
+
+        body{
+            background-image: url("https://i.pinimg.com/1200x/28/49/69/2849693a72dd4d02f59d4759ccd7d644.jpg");
+            background-repeat: no-repeat;
+            background-size: 440px;
+            background-attachment : fixed;
+            background-position: bottom left;
+            /* background-color: aliceblue; */
+        
+        }
+
+        .search{
+            margin: 20px auto;
+            height: 100px;
+            width: 300px;
+        }
+
+        .btns{
+            margin:-50px auto;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        .tasks{
+            height: 500px;
+            width: 600px;
+            border: 1px solid black;
+            margin: 10px auto;
+            background-color: aliceblue;
+            border-radius: 50px;
+            box-shadow: 10px 5px 5px rgba(54, 103, 132, 0.977);
+        }
+        
+        ol{
+            background: navy;
+            
+        }
+
+        li{
+            margin-top: 50px;
+            width: 40%;
+            height: fit-content;
+            margin: 50px auto;
+            font-size: 20px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            box-shadow:3px 3px rgba(54, 62, 132, 0.977);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <h1 style="margin: 10px auto; height: fit-content; width: fit-content;">A Step towards becoming Productive</h1>
+    <div class="search">
+        <input type="text" name="search" id="" style="height: 30px; width: 200px;">
+        <button class="addTask">add task</button>
+
+    </div>
+
+    <div class="screen">
+        <div class="btns">
+            <button class="active">ALL</button>
+            <button>Pending</button>
+            <button>Completed</button>
+        </div>
+        
+
+        <ol class="tasks">
+            <!-- <li></li> -->
+        </ol>
+
+        
+    </div>
+
+    </div>
+    
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
